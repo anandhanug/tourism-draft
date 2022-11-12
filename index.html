@@ -25,6 +25,240 @@
    
 
 </head>
+
+
+
+<!-- style for review cards -->
+<style>
+  :root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #000000;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #000000;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #000000;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #020202;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+
+
+
+
+/* STYLES FOR CARDS */
+.hero {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  min-width: 400px;
+  height: 500px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+.hero-profile-img {
+  height: 60%;
+}
+
+.hero-description-bk {
+  background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(25deg, -13deg);
+}
+
+.second .hero-description-bk {
+  background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
+}
+
+.hero-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-logo img {
+  height: 90%;
+  padding:1px;
+  width: 100%;
+}
+
+.hero-description {
+  position: absolute;
+  color: #fff;
+  /* font-weight: 6; */
+  left: 120px;
+  bottom: 16%;
+  padding-right: 45px;
+  text-align: justify;
+
+}
+
+.hero-btn {
+  position: absolute;
+  color: black;
+  right: 30px;
+  bottom: 10%;
+  padding: 1px 20px;
+  text-decoration: none;
+}
+
+.hero-btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.hero-date {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+}
+/* END CARD DESIGN */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #eee;
+  min-height: 100vh;
+}
+.btn i:before {
+  width: 14px;
+  height: 14px;
+  position: fixed;
+  color: #fff;
+  background: #0077B5;
+  padding: 10px;
+  border-radius: 50%;
+  top:5px;
+  right:5px;
+}
+
+.placestovisit{
+  height: 20%;
+}
+
+</style>
 <body>
   
     <!-- Navbar -->
@@ -148,66 +382,175 @@
   </div>
 
 
-<!-- Destinations -->
-<div class="container">
-<section id="destinations">
-    <h1 class="h1-destinations-heading1 pt-5 "> Major Districts to visit</h1>
-    <h5 class="h5-destinations-heading2">Choose your district and Explore the destinations.</h5>
+<!-- TOP PLACES TO VISIT -->
 
-    <!-- Cards -->
-    <section id="cards-states-home">
-  <div class="row ">
-    <div class="card col-lg-3 mx-2" style="width: 18rem;">
-  <img src="css/images/cards/kasargod.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Kasaragod</h5>
-    <p class="card-text">The northernmost district of Kerala, Kasaragod is renowned for its hills, forts and water bodies. The coir and handloom industry here are extremely famous around the world.With its unique natural and cultural attractions Kasaragod is known as the land of gods, forts, rivers, hills and beautiful beaches. </p>
-    <a href="kasargode.html" class="btn btn-primary">Explore</a>
+
+<div class="container placestovisit">
+  <h1 class="h1-destinations-heading1 pt-5 "> Our Top Packages!</h1>
+  <h5>Offers running out, Book soon!</h5>
+<div class="first hero">
+  <img class="hero-profile-img" src="css/images/cards/kasargod.jpg" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="css/Kerala-tourism-logo.png" alt="">
   </div>
-</div>
-
-<div class="card col-lg-3" style="width: 18rem;">
-  <img src="css/images/cards/Kannur.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Kannur</h5>
-    <p class="card-text"> Kannur is most renowned for the Theyyam performances in its temples. This magnificent art form plays an integral part in the culture of this Northern Kerala district. Formerly known as Cannanore, Marco Polo christened it a ‘Great Emporium Of Spice Trade’. </p> <br><br>
-    <a href="kannur.html" class="btn btn-primary">Explore</a>
+  <div class="hero-description">
+    <h3>Kasaragod</h3>
+    <p>The northernmost district of Kerala, Kasaragod is renowned for its hills, forts and water bodies.</p>
   </div>
-</div>
-
-<div class="card col-lg-3" style="width: 18rem;">
-  <img src="css/images/cards/wayanad.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Wayanad</h5>
-    <p class="card-text">Wayanad adorns the northern tip of Kerala and is among the few areas in the world that have managed to conserve their natural charm and beauty. Teeming with rare flora and fauna, it is considered among the most picturesque locations in Kerala. It is host to a large variety of endemic species. </p> <br>
-    <a href="wayanad.html" class="btn btn-primary">Explore</a>
+  <div class="hero-btn">
+     <button type="button" class="btn btn-light">
+     <a href="kasargode.html">Learn More</a></button> 
   </div>
-</div>
 
-<div class="card col-lg-3 pt-3" style="width: 18rem;">
-  <img src="css/images/cards/kozhikode.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Kozhikode</h5>
-    <p class="card-text">The legendary seaport where Arab, Chinese and East African traders once converged, Kozhikode was previously the most crucial region of the Malabar Coast. Vasco da Gama landed on its shores in 1498, shooting the region to global fame. </p> <br>
-    <a href="kozhikode.html" class="btn btn-primary">Explore</a>
   </div>
-</div>
 
-<div class="card col-lg-3 pt-3" style="width: 18rem;">
-  <img src="css/images/cards/malappuram.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Malappuram</h5>
-    <p class="card-text"> Malappuram district has a rich and vibrant history. The military headquarters of the Zamorins of Kozhikode since ancient times, this district was the site for many of the Mappila Revolts (uprising against the British East India Company in Kerala) between 1792 and 1921. </p> <br>
-    <a href="malappuram.html" class="btn btn-primary">Explore</a>
+
+<div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/Kannur.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Kannur</h3>
+      <p>Kannur is most renowned for the Theyyam performances in its temples. </p>
+    </div>
+    <div class="hero-btn">
+      <button type="button" class="btn btn-light">
+      <a href="kannur.html">Learn More</a></button> 
+    </div>
   </div>
-</div>
 
-<a href="explore.html" class="more-visit"> For more Districts, Click here</a>
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/wayanad.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Wayanad</h3>
+      <p>Wayanad adorns the northern tip of Kerala and is among that have managed to conserve their natural charm and beauty. </p>
+    </div>
+    <div class="hero-btn">
+      <button type="button" class="btn btn-light">
+      <a href="wayanad.html">Learn More</a></button> 
+    </div>
+  </div>
 
-</div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/kozhikode.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Kozhikode</h3>
+      <p>The legendary seaport where Arab, Chinese and East African traders once converged. </p>
+    </div>
+    <div class="hero-btn">
+      <button type="button" class="btn btn-light">
+      <a href="kozhikode.html">Learn More</a></button> 
+    </div>
+  </div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/malappuram.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Malappuram</h3>
+      <p>Malappuram district has a rich and vibrant history. The place of malabar revolts.</p>
+    </div>
+    <div class="hero-btn">
+      <button type="button" class="btn btn-light">
+      <a href="malappuram.html">Learn More</a></button> 
+    </div>
+  </div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/kasargod.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Kasaragod</h3>
+      <p>The northernmost district of Kerala, Kasaragod is renowned for its hills, forts and water bodies.</p>
+    </div>
+    <div class="hero-btn btn btn-light">
+      <button type="button" class="btn btn-light">
+      <a href="#">Learn More</a></button> 
+    </div>
+  </div>
 
 
-</section>
+
+   </div> 
+</body>
+</html>
+<!-- Review Cards -->
+
+<h1 class="h1-destinations-heading1 pt-5 "> Review</h1>
+
+
+<ul class="cards">
+  <li>
+    <a href="" class="card">
+      <img src="https://www.keralatourism.org/images/hri/large/gavi_waterfall_498.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">Ram</h3>            
+            <span class="card__status">1 hour ago</span>
+          </div>
+        </div>
+        <p class="card__description">Perfect planned trip and will suggest to anyone. Cheers guys.</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="" class="card">
+      <img src="https://static.toiimg.com/photo/63365869.cms" class="card__image" alt="" />
+      <div class="card__overlay">        
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">Catherine</h3>
+            <span class="card__status">2 hours ago</span>
+          </div>
+        </div>
+        <p class="card__description">Cheers guys! Perfect weekend on India till date. Promote tourism!</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="" class="card">
+      <img src="https://www.keralatourism.org/images/sitemap/where_to_go20190412062659.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">Jessica Parker</h3>        
+            <span class="card__status">1 hour ago</span>
+          </div>
+        </div>
+        <p class="card__description">Definitely coming back to travel to other destinations. 100% GENUINE service!</p>
+      </div>
+    </a>
+  </li>
+  
+</ul>
+
+
+
 
 <!-- Testimonials -->
 
@@ -237,8 +580,6 @@
 
 </section>
 </div>
-
-
 
 
 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+
+<style>
+    /* BEGIN CARD DESIGN */
+.hero {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  min-width: 400px;
+  height: 500px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+}
+
+.hero-profile-img {
+  height: 60%;
+}
+
+.hero-description-bk {
+  background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(25deg, -13deg);
+}
+
+.second .hero-description-bk {
+  background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
+}
+
+.hero-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-logo img {
+  height: 90%;
+  padding:1px;
+  width: 100%;
+}
+
+.hero-description {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  left: 120px;
+  bottom: 16%;
+  padding-right: 45px;
+  text-align: justify;
+
+}
+
+/* .hero-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  bottom: 10%;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+} */
+
+.hero-btn a {
+  color: #fff;
+}
+
+.hero-date {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+}
+/* END CARD DESIGN */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #eee;
+  min-height: 100vh;
+}
+.btn i:before {
+  width: 14px;
+  height: 14px;
+  position: fixed;
+  color: #fff;
+  background: #0077B5;
+  padding: 10px;
+  border-radius: 50%;
+  top:5px;
+  right:5px;
+}
+</style>
+<body>
+
+
+<div class="btn">
+  <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+
+<div class="first hero">
+  <img class="hero-profile-img" src="css/images/cards/kasargod.jpg" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="css/Kerala-tourism-logo.png" alt="">
+  </div>
+  <div class="hero-description">
+    <h3>Kasaragod</h3>
+    <p>The northernmost district of Kerala, Kasaragod is renowned for its hills, forts and water bodies.</p>
+  </div>
+  <div class="hero-btn btn btn-light">
+    <button type="button" class="">Light</button>
+    <a href="kasargode.html">Learn More</a>
+  </div>
+</div>
+
+<div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/Kannur.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Kannur</h3>
+      <p>Kannur is most renowned for the Theyyam performances in its temples. </p>
+    </div>
+    <div class="hero-btn">
+      <a href="kannur.html">Learn More</a>
+    </div>
+  </div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/wayanad.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Wayanad</h3>
+      <p>Wayanad adorns the northern tip of Kerala and is among that have managed to conserve their natural charm and beauty. </p>
+    </div>
+    <div class="hero-btn">
+      <a href="wayanad.html">Learn More</a>
+    </div>
+  </div>
+
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/kozhikode.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Kozhikode</h3>
+      <p>The legendary seaport where Arab, Chinese and East African traders once converged. </p>
+    </div>
+    <div class="hero-btn">
+      <a href="kozhikode.html">Learn More</a>
+    </div>
+  </div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/malappuram.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Malappuram</h3>
+      <p>Malappuram district has a rich and vibrant history. The place of malabar revolts.</p>
+    </div>
+    <div class="hero-btn">
+      <a href="malappuram.html">Learn More</a>
+    </div>
+  </div>
+
+  <div class="first hero">
+    <img class="hero-profile-img" src="css/images/cards/kasargod.jpg" alt="">
+    <div class="hero-description-bk"></div>
+    <div class="hero-logo">
+      <img src="css/Kerala-tourism-logo.png" alt="">
+    </div>
+    <div class="hero-description">
+      <h3>Kasaragod</h3>
+      <p>The northernmost district of Kerala, Kasaragod is renowned for its hills, forts and water bodies.</p>
+    </div>
+    <div class="hero-btn">
+      <a href="#">Learn More</a>
+    </div>
+  </div>
+
+
+
+    
+</body>
+</html>
