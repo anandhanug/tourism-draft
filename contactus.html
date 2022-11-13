@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link
     href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
     rel="stylesheet">
@@ -22,6 +23,68 @@
    
 
 </head>
+
+<style>
+body{
+  background: url(https://static.toiimg.com/photo/88919476.cms);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar{
+background-color: white;
+color: white;
+}
+.contact-form{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    width: 20%;
+    height: 30%;
+    
+}
+.contact-form form{
+    padding: 10%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: beige;
+    font-family: Montserrat;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+</style>
 <body>
   
     <!-- Navbar -->
@@ -54,142 +117,165 @@
           </div>
         </div>
       </nav>
-
-<!--Section: Contact v.2-->
-<div class="container">
-<section class="mb-4">
-
-  <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-  <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-      a matter of hours to help you.</p>
-
-  <div class="row">
-
-      <!--Grid column-->
-      <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                          <input type="text" id="name" name="name" class="form-control">
-                          <label for="name" class="">Your name</label>
-                      </div>
+      
+      <div class="container contact-form">
+                  <div class="contact-image">
+                      <img src="css/Kerala-tourism-logo.png" alt="rocket_contact"/>
                   </div>
-                  <!--Grid column-->
-
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                          <input type="text" id="email" name="email" class="form-control">
-                          <label for="email" class="">Your email</label>
+                  <form method="post">
+                      <h3>Drop Us a Message</h3>
+                     <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                              </div>
+                          </div>
                       </div>
-                  </div>
-                  <!--Grid column-->
-
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="md-form mb-0">
-                          <input type="text" id="subject" name="subject" class="form-control">
-                          <label for="subject" class="">Subject</label>
-                      </div>
-                  </div>
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-12">
-
-                      <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                          <label for="message">Your message</label>
-                      </div>
-
-                  </div>
-              </div>
-              <!--Grid row-->
-
-          </form>
-
-          <div class="text-center text-md-left">
-              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-          </div>
-          <div class="status"></div>
+                  </form>
       </div>
-      <!--Grid column-->
 
-      <!--Grid column-->
-      <div class="col-md-3 text-center">
-          <ul class="list-unstyled mb-0">
-              <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>2-C, MG-Road, Kazhakootam bypass, Trivandrum-695001</p>
-              </li>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-              <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>6283456654</p>
-              </li>
-
-              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>info@keralatourism.com</p>
-              </li>
-          </ul>
-      </div>
-      <!--Grid column-->
-
-  </div>
-
-</section>
-<!--Section: Contact v.2-->
-
-
-</div>
-
-
-      <!-- footer -->
-<hr>
-<div class="mt-5 pt-1 pb-1 footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-xs-12 about-company">
-        <h2>Kerala Tourism</h2>
-        <p class="pr-5 text-black-50"> Welcome to God's Own Country! <br>
-        STOP. Breathe. Slow down. Embrace life. It’s time for Kerala!
-  Plan your trip with amazing offers and packages.</p>
-        <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
-      </div>
-      <div class="col-lg-3 col-xs-12 links">
-        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-          <ul class="footer-text m-0 p-0">
-            <li><a href="index.html">Home</a></li>
-            <li> <a href="explore.html">Explore</a></li>
-            <li> <a href="login.html">Login</a></li>
-            <li> <a href="signup.html">Sign Up</a></li>
-            <li> <a href="contactus.html">Contact Us</a></li>
-          </ul>
-      </div>
-      <div class="col-lg-4 col-xs-12 location">
-        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-        <p>22-C, MG-Road, Kazhakootam bypass, Trivandrum-695001</p>
-        <p class="mb-0"><i class="fa fa-phone mr-3"></i>6283456654</p>
-        <p><i class="fa fa-envelope-o mr-3"></i>info@keralatourism.com</p>
-      </div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
     </div>
-    <div class="row mt-5">
-      <div class="col copyright">
-        <p class=""><small class="text-black-50">© 2022. All Rights Reserved.</small></p>
-      </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Kerala Tourism
+          </h6>
+          <p>
+              Welcome to God's Own Country! <br>
+              STOP. Breathe. Slow down. Embrace life. It’s time for Kerala!
+        Plan your trip with amazing offers and packages.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Tour Packages
+          </h6>
+          <p>
+            <a href="kasargode.html" class="text-reset">Kasargode</a>
+          </p>
+          <p>
+            <a href="kannur.html" class="text-reset">Kannur</a>
+          </p>
+          <p>
+            <a href="kozhikode.html" class="text-reset">Kozhikode</a>
+          </p>
+          <p>
+            <a href="wayanad.html" class="text-reset">Wayanad</a>
+          </p>
+          <p>
+              <a href="malappuram.html" class="text-reset">Malappuram</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="index.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="explore.html" class="text-reset">Explore</a>
+          </p>
+          <p>
+            <a href="signup.html" class="text-reset">Sign Up</a>
+          </p>
+          <p>
+            <a href="login.html" class="text-reset">Login</a>
+          </p>
+          <p>
+              <a href="contactus.html" class="text-reset">Contact Us</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>22-C, MG-Road, Kazhakootam bypass, Trivandrum-695001</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@keralatourism.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 6283456654 </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="index.html">Kerala Tourism</a>
   </div>
-  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
