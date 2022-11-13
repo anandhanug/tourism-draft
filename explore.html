@@ -20,14 +20,48 @@
     <link rel="stylesheet" href="css/style.css">
 
    <style>
-body{
-        /* background-image: url(https://i.pinimg.com/originals/b6/33/14/b63314bc1ad68a0f8ed92218faf215cd.jpg);
-    background-repeat: no-repeat;
-    ackground-attachment: fixed;
-    background-size: cover; */
 
+.h1-home-heading1{
+  text-align: center;
+  padding: 10px;
+    }
+.district-img{
+  height: 100%;
+  width: 70%;
+  padding: 20px;
+  margin-left: 10px;
+  float: left ;
 }
 
+.carousel-hero-split{
+margin-top: 25px;
+
+}
+.h1-destinations-heading1{
+  text-align: left;
+}
+.h5-destinations-heading2-explore {
+  text-align: left;
+  font-family: Montserrat;
+}
+
+.h5-destinations-heading2-explore-message{
+  text-align: center;
+  font-family: Montserrat;
+}
+
+
+.carousel2{
+  width: 100%;
+}
+/* .h5-destinations-heading2-explore{
+  text-align: left; */
+ 
+}
+/* .destinations-full{
+ text-align: center;
+ display: block;
+} */
    </style>
 
 </head>
@@ -64,10 +98,17 @@ body{
       </nav>
       </div>
     </header>  
-      <body>
+      <body class="container">
         <h1 class="h1-home-heading1">Explore the districts</h1>
-        <img src="css/images/kasargod/Kerala-district-Map.png" class=".mx-autos" alt="">
+        <h1 class="h1-destinations-heading1 "> Major Districts to visit</h1>
+        <h5 class="h5-destinations-heading2-explore">Choose your district and Explore the destinations.</h5>
+        
        <!-- CAROUSEL -->
+<div class="row hero-split">
+  <div class="image-hero-split col-lg-6">
+<img src="css/images/kasargod/Kerala-district-Map.png" class=".mx-autos district-img" alt="">
+</div>
+<div class="carousel-hero-split col-lg-6">
 <div class="carousel2 col-lg-6">
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -93,16 +134,18 @@ body{
   </div> 
   </div>
   </div>
-  
-  
-
+</div>
+</div>
+<h3 class="h1-home-heading1">Popular packages</h3>
+<p class="h5-destinations-heading2-explore-message">We are mainly concentrating on the 5 districts shown below. Also we offer variety packages for the other districts. 
+  <br> For booking those, please contact us privately.
+</p>
         
 
         <!-- Destinations -->
-<div class="container">
+<div class="destinations-full">
   <section id="destinations">
-      <h1 class="h1-destinations-heading1 pt-5 "> Major Districts to visit</h1>
-      <h5 class="h5-destinations-heading2">Choose your district and Explore the destinations.</h5>
+  
   
       <!-- Cards -->
       <section id="cards-states-home">
@@ -152,7 +195,32 @@ body{
     </div>
   </div>
   
-  <a href="explore.html" class="more-visit"> For more Districts, Click here</a>
+  <div class="card col-lg-3 pt-3" style="width: 18rem;">
+    <img src="css/images/cards/malappuram.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Malappuram</h5>
+      <p class="card-text"> Malappuram district has a rich and vibrant history. The military headquarters of the Zamorins of Kozhikode since ancient times, this district was the site for many of the Mappila Revolts (uprising against the British East India Company in Kerala) between 1792 and 1921. </p> <br>
+      <a href="malappuram.html" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+
+  <div class="card col-lg-3 pt-3" style="width: 18rem;">
+    <img src="css/images/cards/malappuram.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Malappuram</h5>
+      <p class="card-text"> Malappuram district has a rich and vibrant history. The military headquarters of the Zamorins of Kozhikode since ancient times, this district was the site for many of the Mappila Revolts (uprising against the British East India Company in Kerala) between 1792 and 1921. </p> <br>
+      <a href="malappuram.html" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+
+  <div class="card col-lg-3 pt-3" style="width: 18rem;">
+    <img src="css/images/cards/malappuram.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Malappuram</h5>
+      <p class="card-text"> Malappuram district has a rich and vibrant history. The military headquarters of the Zamorins of Kozhikode since ancient times, this district was the site for many of the Mappila Revolts (uprising against the British East India Company in Kerala) between 1792 and 1921. </p> <br>
+      <a href="malappuram.html" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
   
   </div>
   
